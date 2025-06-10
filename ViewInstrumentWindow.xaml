@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp1.ViewInstrumentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Инструмент" Height="350" Width="300">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Имя инструмента:" />
+            <TextBox x:Name="txtName" Margin="0,5,0,10"/>
+
+            <TextBlock Text="Количество струн / клавиш:" />
+            <TextBox x:Name="txtStrings" Margin="0,5,0,10"/>
+
+            <Button Content="Сохранить изменения" Click="Save_Click" Margin="0,5,0,15"/>
+
+            <Button Content="Играть" Click="Play_Click"/>
+            <Button Content="Настроить" Click="Tune_Click"/>
+            <Button Content="Описание" Click="Describe_Click"/>
+            <Button Content="Особенность" Click="Feature_Click"/>
+
+            <StackPanel x:Name="extraButtons" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

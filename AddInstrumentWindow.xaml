@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp1.AddInstrumentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Добавить инструмент" Height="400" Width="300">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Название:" />
+            <TextBox x:Name="txtName" />
+
+            <TextBlock Text="Количество струн / клавиш:" Margin="0,10,0,0"/>
+            <TextBox x:Name="txtStrings" />
+
+            <TextBlock Text="Тип:" Margin="0,10,0,0"/>
+            <ComboBox x:Name="cbType">
+                <ComboBoxItem Content="guitar"/>
+                <ComboBoxItem Content="piano"/>
+                <ComboBoxItem Content="other"/>
+            </ComboBox>
+
+            <StackPanel x:Name="guitarOptions" Visibility="Collapsed" Margin="0,10,0,0">
+                <TextBlock Text="Тип гитары:" Margin="0,10,0,0"/>
+                <ComboBox x:Name="cbGuitarType">
+                    <ComboBoxItem Content="акустическая"/>
+                    <ComboBoxItem Content="электрическая"/>
+                </ComboBox>
+                <CheckBox x:Name="chkPickup" Content="Есть звукосниматель?" />
+            </StackPanel>
+
+            <StackPanel x:Name="pianoOptions" Visibility="Collapsed" Margin="0,10,0,0">
+                <TextBlock Text="Пианино: Кол-во педалей"/>
+                <TextBox x:Name="txtPedals"/>
+                <CheckBox x:Name="chkGrand" Content="Это рояль?" />
+            </StackPanel>
+
+            <Button Content="Добавить" Click="Add_Click" Margin="0,15,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
