@@ -20,7 +20,7 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         private List<MusicalInstrument> instruments = new();
-        private string connString = "Host=localhost;Username=postgres;Password=257p~pGD;Database=musicdb";
+        private string connString = "Host=localhost;Username=postgres;Password=your_password;Database=musicdb";
 
         public MainWindow()
         {
